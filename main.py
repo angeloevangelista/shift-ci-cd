@@ -6,7 +6,7 @@ def calcular_media(nota_1, nota_2):
 def verificar_aprovacao(media):
   if media >= 7:
     return "aprovado"
-  elif media >= 5:
+  elif media > 5:
     return "recuperação"
   else:
     return "reprovado"
