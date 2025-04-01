@@ -1,5 +1,5 @@
 def calcular_media(nota_1, nota_2):
-  resultado = (nota_1 + nota_2) / 2
+  resultado = nota_1 + nota_2 / 2
 
   return resultado
 
