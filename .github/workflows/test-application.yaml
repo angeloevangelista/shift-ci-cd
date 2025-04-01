@@ -4,8 +4,5 @@ jobs:
   test-application:
     runs-on: ubuntu-22.04
     steps:
-      - name: "Say hello"
-        run: echo "Hello"
-        
-      - name: "Say Good bye"
-        run: echo "Good bye"
+      - name: "Execute app tests"
+        run: python3 -m unittest
