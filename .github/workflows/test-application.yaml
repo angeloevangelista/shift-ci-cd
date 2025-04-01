@@ -4,5 +4,8 @@ jobs:
   test-application:
     runs-on: ubuntu-22.04
     steps:
+      - name: "Clone repository"
+        uses: actions/checkout@v4
+
       - name: "Execute app tests"
         run: python3 -m unittest
