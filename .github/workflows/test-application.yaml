@@ -1,0 +1,16 @@
+name: "Validate code stability"
+on: [push]
+jobs:
+  test-application:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Clone repository"
+        uses: actions/checkout@v4
+
+      - name: "Execute app tests"
+        run: python3 -m unittest
+
+      - name: "Check for credentials leaks"
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
